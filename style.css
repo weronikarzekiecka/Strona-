@@ -818,3 +818,30 @@ footer img {
     }
 
 }
+/* FIX - hero nie może nachodzić na kolejne sekcje */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+    pointer-events: none;
+}
+
+.areas {
+    position: relative;
+    z-index: 2;
+    background: #f3f1ed;
+}
+
+.areas h2,
+.areas .section-label {
+    position: relative;
+    z-index: 3;
+}
+
+.areas {
+    overflow: hidden;
+}
